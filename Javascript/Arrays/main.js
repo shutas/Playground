@@ -56,3 +56,37 @@ if (index8 !== -1) {
     cities8.splice(index7, 2);
 }
 console.log(cities8);
+
+for (const bird of birds) {
+    console.log(bird);
+}
+
+function double(number) {
+    return number * 2;
+}
+
+const numbers = [5, 2, 7, 6];
+const doubled = numbers.map(double);
+console.log(doubled);
+
+function isLong(city) {
+    return city.length > 8;
+}
+
+const cities9 = ["London", "Liverpool", "Totnes", "Edinburgh"];
+const longer = cities9.filter(isLong);
+console.log(longer);
+
+const data = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
+const cities10 = data.split(",");
+console.log(cities10);
+console.log(cities10.length);
+console.log(cities10[0]);
+console.log(cities10[1]);
+console.log(cities10[cities10.length - 1]);
+
+const commaSeparated = cities10.join("/");
+console.log(commaSeparated);
+
+const dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
+console.log(dogNames.toString());
