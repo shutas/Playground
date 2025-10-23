@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索履歴 - infohunter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">infohunter</h1>
+        <button class="hamburger-menu" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    
+    <div class="layout-with-sidebar">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>検索履歴</h2>
+                <button class="collapse-btn" aria-label="サイドバーを閉じる">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="search-history-list">
+                <div class="history-item">
+                    昨年作った新入社員向けのコンプライアンスに関する研修資料を出して
+                </div>
+                <div class="history-item">
+                    先月佐藤さんが共有してくれた健康診断の受け方について教えて
+                </div>
+                <div class="history-item">
+                    一昨日鈴木さんが編集していた中期経営計画のパワポを出して
+                </div>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <div class="chat-container">
+                <div class="chat-message user-message">
+                    一昨日鈴木さんが編集していた中期経営計画のパワポを出して
+                </div>
+                
+                <div class="chat-message assistant-message">
+                    <p>こちらのファイルになります。</p>
+                    <div class="file-attachment">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="48" height="48" rx="4" fill="#D04423"/>
+                            <text x="24" y="30" font-size="20" font-weight="bold" fill="white" text-anchor="middle">P</text>
+                        </svg>
+                        <span class="file-name">中計ドラフト_20240131.pptx</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="new-search-container">
+                <button class="btn-primary btn-new-search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.5 12C21.5 12 21.34 12 21.19 12.02C20.85 7.74 17.32 4.39 13 4.05V2.05C13 1.5 12.55 1.05 12 1.05C11.45 1.05 11 1.5 11 2.05V4.05C6.68 4.39 3.15 7.74 2.81 12.02C2.66 12 2.5 12 2.5 12C1.67 12 1 12.67 1 13.5C1 14.33 1.67 15 2.5 15C2.5 15 2.66 15 2.81 14.98C3.15 19.26 6.68 22.61 11 22.95V24.95C11 25.5 11.45 25.95 12 25.95C12.55 25.95 13 25.5 13 24.95V22.95C17.32 22.61 20.85 19.26 21.19 14.98C21.34 15 21.5 15 21.5 15C22.33 15 23 14.33 23 13.5C23 12.67 22.33 12 21.5 12ZM12 20C8.69 20 6 17.31 6 14C6 10.69 8.69 8 12 8C15.31 8 18 10.69 18 14C18 17.31 15.31 20 12 20Z" fill="white"/>
+                    </svg>
+                    新しい検索
+                </button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+

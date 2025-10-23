@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>設定 - infohunter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">infohunter</h1>
+        <button class="hamburger-menu" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    
+    <main class="settings-container">
+        <div class="settings-header">
+            <svg class="settings-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 25C22.7614 25 25 22.7614 25 20C25 17.2386 22.7614 15 20 15C17.2386 15 15 17.2386 15 20C15 22.7614 17.2386 25 20 25Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M32.3 25C32.1 25.6 32.3 26.3 32.8 26.8L32.9 27C33.3 27.4 33.5 27.9 33.5 28.5C33.5 29.1 33.3 29.6 32.9 30C32.5 30.4 32 30.6 31.4 30.6C30.8 30.6 30.3 30.4 29.9 30L29.8 29.9C29.3 29.4 28.6 29.2 28 29.4C27.4 29.6 27 30.1 26.9 30.7V31C26.9 32.2 25.9 33.2 24.7 33.2C23.5 33.2 22.5 32.2 22.5 31V30.9C22.4 30.2 21.9 29.7 21.2 29.6C20.6 29.4 19.9 29.6 19.4 30.1L19.2 30.2C18.8 30.6 18.3 30.8 17.7 30.8C17.1 30.8 16.6 30.6 16.2 30.2C15.8 29.8 15.6 29.3 15.6 28.7C15.6 28.1 15.8 27.6 16.2 27.2L16.3 27.1C16.8 26.6 17 25.9 16.8 25.3C16.6 24.7 16.1 24.3 15.5 24.2H15.3C14.1 24.2 13.1 23.2 13.1 22C13.1 20.8 14.1 19.8 15.3 19.8H15.4C16.1 19.7 16.6 19.2 16.7 18.5C16.9 17.9 16.7 17.2 16.2 16.7L16.1 16.5C15.7 16.1 15.5 15.6 15.5 15C15.5 14.4 15.7 13.9 16.1 13.5C16.5 13.1 17 12.9 17.6 12.9C18.2 12.9 18.7 13.1 19.1 13.5L19.3 13.6C19.8 14.1 20.5 14.3 21.1 14.1H21.3C21.9 13.9 22.3 13.4 22.4 12.8V12.6C22.4 11.4 23.4 10.4 24.6 10.4C25.8 10.4 26.8 11.4 26.8 12.6V12.7C26.9 13.4 27.4 13.9 28.1 14C28.7 14.2 29.4 14 29.9 13.5L30.1 13.4C30.5 13 31 12.8 31.6 12.8C32.2 12.8 32.7 13 33.1 13.4C33.5 13.8 33.7 14.3 33.7 14.9C33.7 15.5 33.5 16 33.1 16.4L33 16.6C32.5 17.1 32.3 17.8 32.5 18.4C32.7 19 33.2 19.4 33.8 19.5H34C35.2 19.5 36.2 20.5 36.2 21.7C36.2 22.9 35.2 23.9 34 23.9H33.9C33.2 24 32.7 24.5 32.6 25.2L32.3 25Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h2>設定</h2>
+        </div>
+        
+        <section class="settings-section">
+            <h3>テーマカラー</h3>
+            <div class="theme-buttons">
+                <button class="btn-theme active">ライト</button>
+                <button class="btn-theme">ダーク</button>
+            </div>
+        </section>
+        
+        <section class="settings-section">
+            <h3>パスワードリセット</h3>
+            <div class="form-group">
+                <label for="newPassword">新しいパスワード</label>
+                <input type="password" id="newPassword" name="newPassword" class="form-input-wide">
+            </div>
+        </section>
+        
+        <div class="save-button-container">
+            <button class="btn-primary btn-save">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16L21 8V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17 21V13H7V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 3V8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                保存
+            </button>
+        </div>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+---
+alwaysApply: true
+---
+
+# Coding Style Guide
+
+## Naming Conventions
+
+- Prefer using camelCase for variable names
