@@ -1,4 +1,5 @@
 const fs = require("fs");
+
 /*
 console.log("1. Starting sync read...");
 const data = fs.readFileSync("myfile.txt", "utf8");
@@ -19,6 +20,7 @@ fs.promises.readFile("myfile.txt", "utf8")
     })
     .catch(err => console.error("Error:", err));
 console.log("2. This runs before file is read!");
+*/
 
 async function readFiles() {
     try {
@@ -32,4 +34,3 @@ async function readFiles() {
     }
 }
 readFiles();
-*/
