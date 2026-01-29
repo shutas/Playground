@@ -55,3 +55,27 @@ getUser(123)
     .catch(error => {
         console.error("Error:", error);
     });
+
+const newPromise1 = new Promise(resolve => setTimeout(() => resolve("First result"), 1000));
+const newPromise2 = new Promise(resolve => setTimeout(() => resolve("Second result"), 500));
+
+Promise.race([newPromise1, newPromise2])
+    .then(result => {
+        console.log("Fastest result:", result);
+    });
+
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        reject(new Error("Network error"));
+    });
+}
+
+fetchData()
+    .then(
+        data => console.log("Data:", data),
+        error => console.log("Error handled in then:", error.message)
+    );
+
+fetchData()
+    .then(data => console.log("Data:", data))
+    .catch(error => console.log("Error handled in catch:", error.message));
