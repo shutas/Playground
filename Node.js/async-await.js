@@ -1,4 +1,3 @@
-/*
 const fs = require("fs").promises;
 
 async function readFile() {
@@ -30,7 +29,7 @@ async function fetchUserData() {
 fetchUserData().catch(error => {
     console.log("Caught outside of async function:", error.message);
 });
-*/
+
 
 function fetchData(id) {
     return new Promise(resolve => {
@@ -69,3 +68,100 @@ async function runDemo() {
 }
 
 runDemo();
+
+function getUser(userId, callback) {
+    setTimeout(() => {
+        callback(null, {id: userId, name: "John"});
+    }, 1000);
+}
+
+function getUserPosts(user, callback) {
+    setTimeout(() => {
+        callback(null, ["Post 1", "Post 2"]);
+    }, 1000);
+}
+
+getUser(1, (error, user) => {
+    if (error) {
+        console.error(error);
+        return
+    }
+    console.log("User:", user);
+
+    getUserPosts(user, (error, posts) => {
+        if (error) {
+            console.error(error);
+            return;
+        }
+        console.log("Posts:", posts);
+    });
+});
+
+function getUserPromise(userId) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve({id: userId, name: "John"});
+        }, 1000);
+    });
+}
+
+function getUserPostsPromise(user) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(["Post 1", "Post 2"]);
+        }, 1000);
+    });
+}
+
+getUserPromise(1)
+    .then(user => {
+        console.log("User:", user);
+        return getUserPostsPromise(user);
+    })
+    .then(posts => {
+        console.log("Posts:", posts);
+    })
+    .catch(error => {
+        console.error(error);
+    })
+
+async function getUserAndPosts() {
+    try {
+        const user = await getUserPromise(1);
+        console.log("User:", user);
+
+        const posts = await getUserPostsPromise(user);
+        console.log("Posts:", posts);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+getUserAndPosts();
+
+async function myFunction() {
+    return "Hello";
+}
+
+const result = myFunction();
+console.log(result);
+
+myFunction().then(message => console.log(message));
+const awaitResult = await myFunction();
+console.log(awaitResult);
+
+const util = require("util");
+const fs = require("fs");
+
+const readFile = util.promisify(fs.readFile);
+
+async function readFileContents() {
+    try {
+        const data = await readFile("myFile.txt", "utf8");
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+readFileContents();
