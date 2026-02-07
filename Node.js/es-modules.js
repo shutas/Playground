@@ -3,3 +3,6 @@
 
 import { add, subtract } from "./es-modules-math.mjs";
 console.log(add(5, 3));
+
+import { data } from "./es-modules-data-loader.mjs";
+console.log(data);
