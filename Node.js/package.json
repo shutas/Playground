@@ -2,6 +2,8 @@
   "dependencies": {
     "express": "^5.2.1",
     "helmet": "^8.1.0",
+    "http-deceiver": "^1.2.7",
+    "spdy": "^4.0.2",
     "upper-case": "^2.0.2"
   }
 }
